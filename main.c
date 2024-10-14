@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int countDivisoons(int num)
+int CountDivisiors(int num)
 {
     int count = 0;
-    for (int i = 1; i <= num; i++)
+    for (int i =1; i <= num; i++)
     {
-        if (num % i  == 0)
+        if (num % i == 0)
         {
             count++;
         }
@@ -15,19 +15,19 @@ int countDivisoons(int num)
 
 int main()
 {
-    int maxDivisiors;
-    int numberWithMaxDivisiors;
+    int maxDivisors = 0;
+    int numberWithMaxDivisors = 0;
     for (int i = 1; i <= 100; i++)
     {
-        int divisors =  countDivisoons(i);
-        if (divisors > maxDivisiors)
+        int divisors = CountDivisiors(i);
+        if (divisors > maxDivisors)
         {
-            maxDivisiors = divisors;
-            numberWithMaxDivisiors = i;
+            maxDivisors = divisors;
+            numberWithMaxDivisors = i;
         }
     }
-    printf("The number with the higher divisors is : %d\n", numberWithMaxDivisiors);
-    printf("Number of divisors: %d\n", maxDivisiors);
+    printf("liczba posiadajaca najwieksza liczbe dzielnikow: %d\n", numberWithMaxDivisors);
+    printf("liczba dzielnikow: %d\n", maxDivisors);
     return 0;
 }
 
